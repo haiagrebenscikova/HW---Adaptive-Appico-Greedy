@@ -1,0 +1,109 @@
+body {
+    background-color: #222;
+    font-family: Poppins, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+.greedy-nav {
+    background-color: white;
+    display: table;
+    width: 90%;
+    margin: 5vh auto;
+}
+.greedy-nav ul {
+    display: table-row;
+}
+.greedy-nav ul li {
+    display: table-cell;
+    border-right: 1px solid #333;
+    padding: 1em;
+    vertical-align: middle;
+    min-width: 5em;
+}
+.greedy-nav ul .burger {
+    display: none;
+    width: 1em;
+    background-color: #555;   
+}
+.greedy-nav ul .burger svg{
+    fill: white;
+}
+.greedy-nav ul li:last-child {
+    border-right: none;
+}
+@media (max-width: 1200px) {
+    .greedy-nav ul .lg {
+        display: none;
+    }
+    .greedy-nav ul .burger {
+        display: table-cell; 
+        position: relative;     
+    }
+    .greedy-nav ul .burger svg {
+        transform: translateX(1.5em);
+    }
+    .greedy-nav ul .burger::before {
+        content: "2";
+        color: white;
+        background-color: #555;
+        border: 2px solid white;
+        border-radius: 100%;
+        position: absolute;
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+        text-align: center;
+        padding: 0.3em;
+        left:-1.3em;
+    }
+}
+@media (max-width: 900px) {
+    .greedy-nav ul .md {
+        display: none;
+    }
+    .greedy-nav ul .burger {
+        display: table-cell; 
+        position: relative;     
+    }
+    .greedy-nav ul .burger::before {
+        content: "4";
+        color: white;
+        background-color: #555;
+        border: 2px solid white;
+        border-radius: 100%;
+        position: absolute;
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+        text-align: center;
+        padding: 0.3em;
+        left:-1.3em;
+    }
+}
+@media (max-width: 750px) {
+    .greedy-nav ul .sm {
+        display: none;
+    }
+    .greedy-nav ul .burger {
+        display: table-cell; 
+        position: relative;     
+    }
+    .greedy-nav ul .burger::before {
+        content: "6";
+        color: white;
+        background-color: #555;
+        border: 2px solid white;
+        border-radius: 100%;
+        position: absolute;
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+        text-align: center;
+        padding: 0.3em;
+        left:-1.3em;
+    }
+}
